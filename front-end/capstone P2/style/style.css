@@ -1,0 +1,8 @@
+.hero{
+    background: url(https://zhuozidesign.com/wp-content/uploads/2021/04/touxiang-2-2.jpg);
+    background-size: cover;
+    
+    box-shadow: inset 0 0 0 2000px rgba(30, 30, 30, 0.3);
+
+    /* background-color: beige; */
+  }
