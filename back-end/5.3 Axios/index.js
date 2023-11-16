@@ -5,7 +5,6 @@ import axios from "axios";
 const app = express();
 const port = 3000;
 
-
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -21,7 +20,6 @@ app.get("/", async (req, res) => {
     // console.log(result);
 
     res.render("index.ejs", { data: result });
-
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
@@ -63,3 +61,18 @@ app.post("/", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port: ${port}`);
 });
+
+let User = function (name, email) {
+  this.name = name;
+  this.email = email;
+};
+
+User.prototype.getInfo = function () {
+  return `name: ${this.name}, email: ${this.email}`;
+};
+
+let user1 = new User("Joey", "joey@test.com");
+
+// console.log(user1);
+
+console.log(user1.getInfo());

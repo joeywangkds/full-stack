@@ -1,0 +1,13 @@
+nav {
+  height: 40px;
+  background-color: deepskyblue;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > a {
+  color: white;
+  text-decoration: none;
+}
